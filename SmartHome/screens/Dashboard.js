@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View} from 'react-native';
+import { Block, Text } from '../components'
 
 class Dashboard extends Component {
   render() {
     return (
-      <View>
-        <Text> Dashboard </Text>
-      </View>
+      <Block>
+        <Text h1> Dashboard </Text>
+      </Block>
     );
   }
 }
