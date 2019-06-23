@@ -7,6 +7,7 @@ const colors = {
   };
   
   const sizes = {
+    base: 14,
     font: 14,
     welcome:18,
     name:21,
@@ -28,11 +29,17 @@ const colors = {
       letterSpacing: -1.1,
       lineHeight: sizes.name,
     },
+    caption: {
+      fontSize: sizes.welcome,
+      color: colors.gray,
+      letterSpacing: -0.6,
+      lineHeight: sizes.welcome +4,
+    },
     h1: {
       fontSize: sizes.h1,
       color: colors.black,
       letterSpacing: -10,
-      lineHeight: sizes.h1 +4,
+      lineHeight: sizes.h1,
     },
     button: {
       fontSize: sizes.button,
