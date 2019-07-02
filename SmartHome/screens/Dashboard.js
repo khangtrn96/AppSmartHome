@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet} from 'react-native';
+import { ScrollView, StyleSheet} from 'react-native';
 
 import * as theme from '../theme'
 import { Block, Text } from '../components'
@@ -13,7 +13,7 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <Block style={styles.dashboard}>
+    <ScrollView contentContainerStyle={styles.dashboard}>
         {/* Block #1 */}
         <Block column>
           <Text welcome> Welcome </Text>
@@ -33,14 +33,38 @@ class Dashboard extends Component {
           </Block>
         </Block>
         {/* Block #3 */}
-        <Block flex column>
-          <Block row >
-            <Block flex={1} style={styles.button}>
-              <Text></Text>
+        <Block flex column space="around">
+          <Block row space="around">
+            <Block center middle style={styles.button}>
+              <Text button >Light</Text>
+            </Block>
+            
+            <Block center middle style={styles.button}>
+              <Text button >AC</Text>
             </Block>
           </Block>
+
+          <Block row space="around">
+              <Block center middle style={styles.button}>
+                <Text button >Temperature</Text>
+              </Block>
+              
+              <Block center middle style={styles.button}>
+                <Text button >Fan</Text>
+              </Block>
+          </Block>
+         
+          <Block row space="around">
+              <Block center middle style={styles.button}>
+                <Text button >Wi-fi</Text>
+              </Block>
+              
+              <Block center middle style={styles.button}>
+                <Text button >Electricity</Text>
+              </Block>
+          </Block>
         </Block>
-      </Block>
+    </ScrollView>
     );
   }
 }
@@ -49,6 +73,7 @@ export default Dashboard;
 const styles = StyleSheet.create({
   dashboard:{
     padding:theme.sizes.base *2,
+    flex:1,
   },
   button:{
     backgroundColor: theme.colors.button,

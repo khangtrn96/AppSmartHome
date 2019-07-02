@@ -44,6 +44,7 @@ const colors = {
     button: {
       fontSize: sizes.button,
       color: colors.black,
+      fontWeight:"600",
       letterSpacing: -0.4,
       lineHeight: sizes.button +4,
     },
