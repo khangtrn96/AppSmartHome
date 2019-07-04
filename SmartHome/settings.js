@@ -1,58 +1,67 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import theme from './theme';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
+// ** Icon get from "https://oblador.github.io/react-native-vector-icons/"
+import * as theme from './theme';
+
 export default{
     'light':{
         name: 'Light',
-        icon: (
-            <FontAwesome  
-                size={theme.sizes.font} 
-                color={theme.colors.accent}
-                name=""
+        icon: ({size, color, ...props}) => (
+            <MaterialCommunityIcons  
+                size={size || theme.sizes.font} 
+                color={color || theme.colors.accent}
+                name="lightbulb-outline"
+                {...props}
             />)
     },
     'ac':{
         name: 'AC',
-        icon: (
-            <FontAwesome  
-                size={theme.sizes.font} 
-                color={theme.colors.accent}
-                name=""
+        icon: ({size, color, ...props}) => (
+            <MaterialCommunityIcons  
+                size={size || theme.sizes.font} 
+                color={color || theme.colors.accent}
+                name="access-point"
+                {...props}
             />)    },
     'temperature':{
         name: 'Temperature',
-        icon: (
-            <FontAwesome  
-                size={theme.sizes.font} 
-                color={theme.colors.accent}
-                name=""
+        icon: ({size, color, ...props}) => (
+            <MaterialCommunityIcons  
+                size={size || theme.sizes.font} 
+                color={color || theme.colors.accent}
+                name="temperature-celsius"
+                {...props}
             />)
     },
     'fan':{
         name: 'Fan',
-        icon: (
-            <FontAwesome  
-                size={theme.sizes.font} 
-                color={theme.colors.accent}
-                name=""
+        icon: ({size, color, ...props}) => (
+            <MaterialCommunityIcons  
+                size={size || theme.sizes.font} 
+                color={color || theme.colors.accent}
+                name="fan"
+                {...props}
             />)
     },
     'wi-fi':{
         name: 'Wi-Fi',
-        icon: (
-            <FontAwesome  
-                size={theme.sizes.font} 
-                color={theme.colors.accent}
-                name=""
+        icon: ({size, color, ...props}) => (
+            <MaterialCommunityIcons  
+                size={size || theme.sizes.font} 
+                color={color || theme.colors.accent}
+                name="wifi"
+                {...props}
             />)
     },
     'electricity':{
         name: 'Electricity',
-        icon: (
-            <FontAwesome  
-                size={theme.sizes.font} 
-                color={theme.colors.accent}
+        icon: ({size, color, ...props}) => (
+            <MaterialCommunityIcons  
+                size={size || theme.sizes.font} 
+                color={color || theme.colors.accent}
+                name="flash-outline"
+                {...props}
             />)
     }
 }
