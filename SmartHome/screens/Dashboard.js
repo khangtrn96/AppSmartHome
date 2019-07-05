@@ -3,13 +3,13 @@ import { ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
 
 import * as theme from '../theme'
 import { Block, Text } from '../components'
-import * as mocks from '../settings';
+import mocks from '../settings';
 
 class Dashboard extends Component {
   static navigationOptions = {
-      header: (
-        null
-      )
+      headerStyle: {
+        borderBottomColor: 'transparent',
+      }
     }
 
   render() {
@@ -40,9 +40,14 @@ class Dashboard extends Component {
             <Text>Chart</Text>
           </Block>
         </Block>
-        {/* Block #3 */}
-        <Block flex column space="around">
+
+        {/* Block #3
+        use space="around" in space="between" to adjust size displat better
+        */}
+
+        <Block flex column space="between">
           <Block row space="around">
+
             <TouchableOpacity 
               activeOpacity={0.8} 
               onPress={() =>navigation.navigate('Settings', { name: 'light'})}>
@@ -109,6 +114,7 @@ class Dashboard extends Component {
     );
   }
 }
+
 Dashboard.defaultProps = {
   settings: mocks,
 }
